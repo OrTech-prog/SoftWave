@@ -18,13 +18,13 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(
         135deg,
-        #0c0c0c 0%,
-        #1a1a2e 15%,
-        #16213e 35%,
-        #0f3460 50%,
-        #533a7d 70%,
-        #8b5a8c 85%,
-        #a0616a 100%
+        #0c0c0cc6 0%,
+        #0638b4 15%,
+        #0f86d5 35%,
+        #1eb9fb 50%,
+        #03a3fa 70%,
+        #4c03b9 85%,
+        #46047d 100%
     );
     min-height: 100vh;
     overflow-x: hidden;
@@ -41,7 +41,7 @@ body {
 }
 .shape {
     position: absolute;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.177);
     animation: float 6s ease-in-out infinite;
     box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
 }
