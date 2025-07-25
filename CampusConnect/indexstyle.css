@@ -447,21 +447,7 @@ button[type="submit"] {
     line-height: 1.6;
     margin-bottom: 20px;
 }
-.map-features {
-    list-style: none;
-}
-.map-features li {
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 8px;
-    padding-left: 20px;
-    position: relative;
-}
-.map-features li:before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: rgba(255, 255, 255, 0.9);
-}
+
 /* booking page styles */
 .booking-grid {
     display: grid;
