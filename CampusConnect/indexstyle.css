@@ -291,7 +291,7 @@ button[type="submit"] {
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.6;
 }
-/* About page styles */
+/* Events page styles */
 .events-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -362,10 +362,10 @@ button[type="submit"] {
     transform: translateY(-10px);
 }
 .team-avatar {
-    width: 120px;
-    height: 120px;
+    width: 250px;
+    height: 250px;
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
+    border-radius: 0%;
     margin: 0 auto 20px;
     display: flex;
     align-items: center;
