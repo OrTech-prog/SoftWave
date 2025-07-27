@@ -12,6 +12,8 @@
     <div class="shape"></div><div class="shape"></div><div class="shape"></div>
   </div>
 
+  <div class="moving-blocks"></div>
+
   <header>
     <div class="navbar">
       <div class="navbar-left">
@@ -46,8 +48,17 @@
 
   <main>
     <h1>Student Information</h1>
-    <p>This page will show all registered student details.</p>
-  </main>
+    <section class="student-info-container">
+  <section class="student-info-section">
+  <h2>Registered Students</h2>
+  <p class="info-subtext">Browse through our enrolled student database.</p>
+
+  <!-- Search Field -->
+  <input type="text" id="searchInput" placeholder="Search by name or course..." />
+
+  <!-- Card Grid -->
+  <div class="student-card-grid" id="studentCardGrid"></div>
+</section>
 
   <script src="Student.js"></script>
 </body>
