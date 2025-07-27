@@ -135,3 +135,157 @@ if (form) {
   `;
   document.head.appendChild(fadeStyle);
 }
+
+
+(function() {
+  const container = document.querySelector('.moving-blocks');
+  const num = 20;  
+
+  for (let i = 0; i < num; i++) {
+    const block = document.createElement('div');
+    block.classList.add('block');
+
+    
+    const startX = Math.random() * 100; 
+    block.style.left = `${startX}vw`;
+
+    
+    const size = 20 + Math.random() * 40; 
+    block.style.width = `${size}px`;
+    block.style.height = `${size}px`;
+
+    
+    const isCircle = Math.random() > 0.5;
+    block.style.borderRadius = isCircle ? '50%' : '0';
+
+   
+    const delay = Math.random() * -12;
+    block.style.animationDelay = `${delay}s`;
+    const duration = 8 + Math.random() * 8; 
+    block.style.animationDuration = `${duration}s`;
+
+    container.appendChild(block);
+  }
+})();
+
+const studentData = [
+  {
+    name: "Ofentse Ramasodi",
+    email: "Ofentse@cc.com",
+    course: "Software Engineering",
+    year: "1st year",
+    status: "Active"
+  },
+  {
+    name: "Nhlanhla Sibiya",
+    email: "Nhlanhla@cc.com",
+    course: "Software Engineering",
+    year: "1st Year",
+    status: "Active"
+  },
+  {
+    name: "Thabo Nkosi",
+    email: "thabo.n@cc.com",
+    course: "Data Science",
+    year: "3rd Year",
+    status: "Active"
+  },
+  {
+    name: "Naledi Dlamini",
+    email: "naledi.d@cc.com",
+    course: "Cybersecurity",
+    year: "2nd Year",
+    status: "Active"
+  },
+  {
+    name: "Katlego Zuma",
+    email: "katlego.z@cc.com",
+    course: "AI & Robotics",
+    year: "3rd Year",
+    status: "Inactive"
+  },
+  {
+    name: "Zanele Mthembu",
+    email: "zanele.m@cc.com",
+    course: "Web Development",
+    year: "1st Year",
+    status: "Active"
+  },
+  {
+    name: "Mpumi Khumalo",
+    email: "mpumi.k@cc.com",
+    course: "Software Engineering",
+    year: "2nd Year",
+    status: "Active"
+  },
+  {
+    name: "Tshepo Mabaso",
+    email: "tshepo.m@cc.com",
+    course: "UX/UI Design",
+    year: "3rd Year",
+    status: "Active"
+  },
+  {
+    name: "Bonolo Radebe",
+    email: "bonolo.r@cc.com",
+    course: "Information Systems",
+    year: "2nd Year",
+    status: "Active"
+  },
+  {
+    name: "Sipho Dube",
+    email: "sipho.d@cc.com",
+    course: "Computer Science",
+    year: "1st Year",
+    status: "Active"
+  }
+];
+
+
+function generateStudentCards(students) {
+  const container = document.getElementById("studentCardGrid");
+  container.innerHTML = "";
+
+  students.forEach(student => {
+    const card = document.createElement("div");
+    card.className = "student-card";
+    card.innerHTML = `
+      <h3>${student.name}</h3>
+      <p><strong>Email:</strong> ${student.email}</p>
+      <p><strong>Course:</strong> ${student.course}</p>
+      <p><strong>Year:</strong> ${student.year}</p>
+      <p><strong>Status:</strong> ${student.status}</p>
+    `;
+    container.appendChild(card);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("searchInput");
+
+  searchInput.addEventListener("input", function () {
+    const query = this.value.toLowerCase();
+    const filtered = studentData.filter(student =>
+      student.name.toLowerCase().includes(query) ||
+      student.course.toLowerCase().includes(query)
+    );
+    generateStudentCards(filtered);
+  });
+
+  generateStudentCards(studentData);
+});
+
+document.querySelector(".upload-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById("studentName").value;
+  const docType = document.getElementById("docType").value;
+  const file = document.getElementById("fileUpload").files[0];
+
+  if (name && docType && file) {
+    alert(`Successfully uploaded ${docType} for ${name}`);
+    this.reset();
+  } else {
+    alert("Please fill in all fields.");
+  }
+});
