@@ -12,6 +12,8 @@
     <div class="shape"></div><div class="shape"></div><div class="shape"></div>
   </div>
 
+<div class="moving-blocks"></div>
+
   <header>
     <div class="navbar">
       <div class="navbar-left">
@@ -44,10 +46,29 @@
     </div>
   </header>
 
-  <main>
-    <h1>Upload Documents</h1>
-    <p>Use this section to upload assignments, notes, or forms.</p>
+  <main class="content">
+    <h1>Upload Documents</h1>   
+    <section class="upload-section">
+      <h2>Upload Student Documents</h2>
+      <form class="upload-form">
+        <label for="studentName">Student Name:</label>
+        <input type="text" id="studentName" placeholder="Enter full name" required>
+
+        <label for="docType">Document Type:</label>
+        <select id="docType" required>
+          <option value="id">Student ID</option>
+          <option value="report">Report</option>
+          <option value="assignment">Assignment</option>
+        </select>
+
+        <label for="fileUpload">Upload File:</label>
+        <input type="file" id="fileUpload" required>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
   </main>
+
 
   <script src="Student.js"></script>
 </body>
