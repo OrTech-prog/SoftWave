@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusConnect</title>
+    
+    <link rel="stylesheet" href="indexstyle.css">
+
+
+
+
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- SINGLE NAVIGATION HEADER -->
+    <header>
+        <div class="container">
+            <nav class="glass">
+                <div class="logo" onclick="showPage('home')">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 48 48" fill="white" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Grid of circles with varying sizes -->
+                            <circle cx="16" cy="16" r="5" opacity="0.9"/>
+                            <circle cx="32" cy="16" r="4" opacity="0.8"/>
+                            <circle cx="16" cy="32" r="4" opacity="0.7"/>
+                            <circle cx="32" cy="32" r="5" opacity="0.85"/>
+                            <!-- Small accent dots -->
+                            <circle cx="24" cy="8" r="2" opacity="1"/>
+                            <circle cx="8" cy="24" r="2" opacity="0.9"/>
+                            <circle cx="40" cy="24" r="2" opacity="0.9"/>
+                            <circle cx="24" cy="40" r="2" opacity="1"/>
+                            <!-- Tiny corner dots -->
+                            <circle cx="8" cy="8" r="1" opacity="0.6"/>
+                            <circle cx="40" cy="8" r="1" opacity="0.6"/>
+                            <circle cx="8" cy="40" r="1" opacity="0.6"/>
+                            <circle cx="40" cy="40" r="1" opacity="0.6"/>
+                        </svg>
+                    </div>
+                    <span>University</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#" onclick="showPage('home')" class="active">Home</a>
+                    <a href="#" onclick="showPage('events')">Events</a>
+                    <a href="#" onclick="showPage('map')">Map</a>
+                    <a href="#" onclick="showPage('booking')">Booking</a> 
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="hero glass">
+                    <div class="hero-image">
+                        <img src="campus.jpg" alt="Main Campus Image" />
+                    </div>
+                    <div class="hero-content">
+                        <h1>Welcome to the University</h1>
+                        <p> University produces graduates whose qualifications are internationally recognised and locally applicable, underpinned by values of engaged citizenship and social justice. </p>
+                        <a href="#" class="cta-button" onclick="showPage('events')">Learn More</a>
+                    </div>
+                </section>
+
+                <section class="features">
+                    <div class="feature-card glass">
+                        <div class="feature-icon">🗺️⁀જ 🚍</div>
+                        <h3>Real-Time Navigation</h3>
+                        <p>AR campus maps & live shuttle tracking. Never get lost again! (Augmented Reality wayfinding + bus GPS)</p>
+                    </div>
+                    
+                    <div class="feature-card glass">
+                        <div class="feature-icon">🧠👩🏻‍💻</div>
+                        <h3>Smart Study Spots</h3>
+                        <p>Find silent zones, group tables, or outlets nearby in seconds. (Live occupancy sensors & noise level mapping)</p>
+                    </div>
+                    
+                    <div class="feature-card glass">
+                        <div class="feature-icon">𓊯📡</div>
+                        <h3>Food Radar</h3>
+                        <p>See dining hall menus, food truck locations, and shortest snack lines. (Real-time cafeteria cameras + mobile ordering)</p>
+                    </div>
+
+                    <div class="feature-card glass">
+                        <div class="feature-icon">🎉🔔</div>
+                        <h3>Campus Events Pulse</h3>
+                        <p>Personalized event alerts for parties, talks, and free swag near you. (Geo-targeted notifications + interest filters)</p>
+                    </div>
+
+                    <div class="feature-card glass">
+                        <div class="feature-icon">🛡️🆘</div>
+                        <h3>24/7 Safety Network</h3>
+                        <p>Instant emergency contacts, virtual walk-home buddies, and blue light locator. (Live security patrol tracking + panic button)</p>
+                    </div>
+
+                    <div class="feature-card glass">
+                        <div class="feature-icon">👨🏻‍🏫🔎</div>
+                        <h3>Classroom Genius</h3>
+                        <p>Scan any lecture hall to see power outlets, best seats, and professor ratings. (Crowdsourced student insights + AR overlay)</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- EVENTS PAGE -->
+    <div id="events" class="page">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="events-content">
+                    <div class="events-text glass">
+                        <h2>About Our Campus Events</h2>
+                        <p>Our university thrives with 200+ annual events, from hackathons to cultural festivals, creating unforgettable experiences for every student.</p>
+                        <p>We build vibrant communities through events designed to spark connections, fuel passions, and create lifelong memories beyond the classroom.</p>
+                        <p>Every gathering is crafted to enrich your campus journey - blending learning, celebration, and personal growth into every moment.</p>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-card glass">
+                            <div class="stat-number">200+</div>
+                            <div class="stat-label">Annual Events</div>
+                        </div>
+                        <div class="stat-card glass">
+                            <div class="stat-number">5000+</div>
+                            <div class="stat-label">Student Participants</div>
+                        </div>
+                        <div class="stat-card glass">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Clubs Hosting</div> <!-- The number of unique student clubs/organizations actively hosting events on campus annually. -->
+                        </div>
+                        <div class="stat-card glass">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Event Updates</div>
+                        </div> 
+                    </div>
+                </section>
+
+                <section class="team-section">
+                    <h2>Events To Look Out For</h2>
+                    <div class="team-grid">
+                        <div class="team-member glass">
+                            <div class="team-avatar"> <img src="SpringEvent.jpg" alt="Spring Event Image" style="width: 245px; height: 245px;" /> </div>
+                            <h3>Spring Music Fest</h3>
+                            <p class="role">19 September</p>
+                            <p class="bio"><b>Headliners + student bands. Food trucks & art installations at the quad. Free for students!</b></p>
+                            <div class="team-social">
+                                <a href="#" title="Register">📋</a>
+                                <a href="#" title="Add to calendar">🗓️</a>
+                                <a href="#" title="Poster">🖼</a>
+                            </div>
+                        </div>
+                        <div class="team-member glass">
+                            <div class="team-avatar"><img src="hackathon.jpg" alt="Hackathon" style="width: 245px; height: 245px;" /></div>
+                            <h3>Hackathon X</h3>
+                            <p class="role">13 August</p>
+                            <p class="bio"><b>36-hour coding marathon with R20k prizes. Tech workshops & recruiter booths.</b></p>
+                            <div class="team-social">
+                                <a href="#" title="Sign Up">✍</a>
+                                <a href="#" title="Add to calendar">🗓️</a>
+                                <a href="#" title="Resources">🤖</a>
+                            </div>
+                        </div>
+                        <div class="team-member glass">
+                            <div class="team-avatar"><img src="Food.jpg" alt="Food Stalls" style="width: 245px; height: 245px;" /></div>
+                            <h3>Global Food Fiesta</h3>
+                            <p class="role">22 August</p>
+                            <p class="bio"><b>Taste 50+ countries in one place! Cooking demos & cultural performances.</b></p>
+                            <div class="team-social">
+                                <a href="#" title="Vendor">🛒</a>
+                                <a href="#" title="Add to calendar">🗓️</a>
+                                <a href="#" title="Requirements">📑</a>
+                            </div>
+                        </div>
+                        <div class="team-member glass">
+                            <div class="team-avatar"><img src="Pitch.jpg" alt="Student making pitch" style="width: 245px; height: 245px;" /></div>
+                            <h3>Startup Pitch Battle</h3>
+                            <p class="role">4 September</p>
+                            <p class="bio"><b>Student founders compete for seed funding. Shark-tank style judging!</b></p>
+                            <div class="team-social">
+                                <a href="#" title="Join">📝</a>
+                                <a href="#" title="Add to calendar">🗓️</a>
+                                <a href="#" title="Requirements">📑</a>
+                            </div>
+                        </div>
+                        <div class="team-member glass">
+                            <div class="team-avatar"><img src="Sky.jpeg" alt="Starry Night with telescope" style="width: 245px; height: 245px;" /></div>
+                            <h3>Astronomy Night</h3>
+                            <p class="role">3 October</p>
+                            <p class="bio"><b>targazing with giant telescopes. Planetarium shows & space trivia.</b></p>
+                            <div class="team-social">
+                                <a href="#" title="Join">📝</a>
+                                <a href="#" title="Add to calendar">🗓️</a>
+                                <a href="#" title="Info">🔎</a>
+                            </div>
+                        </div>
+                        <div class="team-member glass">
+                            <div class="team-avatar"><img src="eco.png" alt="Student in eco garden" style="width: 245px; height: 245px;" /> </div>
+                            <h3>Eco-Fest</h3>
+                            <p class="role">8 August</p>
+                            <p class="bio"><b>Sustainable fashion show + thrift market. DIY solar charger workshops.</b></p>
+                            <div class="team-social">
+                                <a href="#" title="Register">📋</a>
+                                <a href="#" title="Add to calendar">🗓️</a>
+                                <a href="#" title="Eco-Hub">♻️</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAP PAGE -->
+    <div id="map" class="page">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="hero glass">
+                    <h1>Our Campus Maps</h1>
+                    <p>The maps below can be used in conjunction with the building, department and office lists. It lists buildings, departments and offices on campus with their map co-ordinates. </p>
+                </section>
+
+                <section class="map-grid">
+                    <div class="map-card glass">
+                        <div class="map-header">
+                            
+                            <h3>Upper Campus</h3>
+                        </div>
+                        <p> <a href="file:///C:/Users/orama/OneDrive/Documentos/Software%20engineering/1st%20Semester/WIL/CampusConnect/SoftWave/CampusConnect/Upper%20Campus.html" target="_blank"> <img src="uppercampus.jpg" alt="Upper Campus Image" style="width: 320px; height: auto;"> </a>  </p>
+                        
+                          
+                    </div>
+
+                    <div class="map-card glass">
+                        <div class="map-header">
+                            
+                            <h3>Middle & Lower Campus</h3>
+                        </div>
+                        <p> <a href="file:///C:/Users/orama/OneDrive/Documentos/Software%20engineering/1st%20Semester/WIL/CampusConnect/SoftWave/CampusConnect/Middle&Lower%20Campus.html" target="_blank"><img src="middlelowercampus.jpg" alt="Middle & Lower Campus Image" style="width: 320px; height: auto;"></a></p>
+                        
+                           
+                    </div>
+
+                    <div class="map-card glass">
+                        <div class="map-header">
+                            
+                            <h3>Health Sciences Campus</h3>
+                        </div>
+                        <p> <a href="file:///C:/Users/orama/OneDrive/Documentos/Software%20engineering/1st%20Semester/WIL/CampusConnect/SoftWave/CampusConnect/HS%20Campus.html" target="_blank"><img src="healthsciencecampus.jpg" alt="Health Sciences Campus Image" style="width: 320px; height: auto;"></a></p>
+                        
+                       
+                    </div>
+
+                    <div class="map-card glass">
+                        <div class="map-header">
+                            
+                            <h3>Grooteschuur Campus </h3>
+                        </div>
+                        <p> <a href="file:///C:/Users/orama/OneDrive/Documentos/Software%20engineering/1st%20Semester/WIL/CampusConnect/SoftWave/CampusConnect/GSH%20Campus.html" target="_blank"><img src="grooteschuur.jpg" alt="Grooterschuur Campus Image" style="width: 320px; height: auto;" ></a></p>
+                        
+                        
+                    </div>
+
+                    <div class="map-card glass">
+                        <div class="map-header">
+                            
+                            <h3>Hiddingh Campus</h3>
+                        </div>
+                        <p> <a href="file:///C:/Users/orama/OneDrive/Documentos/Software%20engineering/1st%20Semester/WIL/CampusConnect/SoftWave/CampusConnect/H%20Campus.html" target="_blank"><img src="hiddinghcampus.jpg" alt="Hiddingh Campus Image" style="width: 320px; height: auto;"></a></p>
+                      
+                    </div>
+
+                    <div class="map-card glass">
+                        <div class="map-header">
+                            
+                            <h3>Breakwater Campus</h3>
+                        </div>
+                        <p> <a href="file:///C:/Users/orama/OneDrive/Documentos/Software%20engineering/1st%20Semester/WIL/CampusConnect/SoftWave/CampusConnect/BW%20Campus.html" target="_blank"><img src="breakwatercampus.jpg" alt="Breakwater Campus Image" style="width: 320px; height: auto;"></a></p>
+                        
+                          
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOOKING PAGE -->
+    <div id="booking" class="page">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="booking-grid">
+                    <div class="booking-form glass">
+                        <h2>Get In Touch</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" placeholder="Tell us about your project..." required></textarea>
+                            </div>
+                            <button type="submit" class="cta-button">Send Message</button>
+                        </form>
+                    </div>
+
+                    <div class="booking-info glass">
+                        <h2>booking Information</h2>
+                        
+                        <div class="booking-item">
+                            <div class="booking-item-icon">📧</div>
+                            <div class="booking-item-text">
+                                <h4>Email</h4>
+                                <p>hello@glossytouch.com</p>
+                            </div>
+                        </div>
+
+                        <div class="booking-item">
+                            <div class="booking-item-icon">📞</div>
+                            <div class="booking-item-text">
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+
+                        <div class="booking-item">
+                            <div class="booking-item-icon">📍</div>
+                            <div class="booking-item-text">
+                                <h4>Address</h4>
+                                <p>123 Design Street<br>Creative District, CD 12345</p>
+                            </div>
+                        </div>
+
+                        <div class="booking-item">
+                            <div class="booking-item-icon">🕒</div>
+                            <div class="booking-item-text">
+                                <h4>Business Hours</h4>
+                                <p>Mon-Fri: 9AM-6PM<br>Sat-Sun: 10AM-4PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="booking-map-section">
+                    <div class="booking-map glass">
+                        <h2>Find Us</h2>
+                        <div class="map-container">
+                            <div class="map-placeholder">
+                                <gmp-map center="-33.95750, 18.46056" zoom="16" map-id="DEMO_MAP_ID" style="height: 450px">  <gmp-advanced-marker
+        position="-33.95750,18.46056"
+        title="University"
+      ></gmp-advanced-marker></gmp-map>
+
+                                  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlgu8n2RepvBpaJQcx_ip3kLYjpWNgr9Y&libraries=maps,marker"
+    defer
+></script>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- SINGLE FOOTER -->
+    <div id="footer">
+        <div class="container">
+            <footer class="glass">
+                <div class="footer-content">
+                    <div class="footer-links">
+                        <a href="#" onclick="showPage('events')">About Us</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of map</a>
+                        <a href="#">XML Sitemap</a>
+                        <a href="#" onclick="showPage('booking')">booking</a>
+                    </div>
+                    <div class="copyright">
+                        Copyright &copy; - 2025 - University - All rights reserved. POPIA | PAIA. 
+                        
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+<script src="indexJ.js"></script>
+</body>
+</html>
