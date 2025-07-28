@@ -568,7 +568,7 @@ button[type="submit"] {
     color: rgba(255, 255, 255, 0.8);
     text-align: center;
 }
-.map-placeholder-icon {
+/* .map-placeholder-icon {
     font-size: 64px;
     margin-bottom: 20px;
     opacity: 0.7;
@@ -586,7 +586,7 @@ button[type="submit"] {
     font-size: 14px;
     opacity: 0.6;
     margin-top: 20px;
-}
+} */
 /* Footer styles */
 #footer {
     margin-top: 60px;
