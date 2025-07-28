@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(
+        135deg,
+        #0c0c0cc6 0%,
+        #0638b4 15%,
+        #0f86d5 35%,
+        #1eb9fb 50%,
+        #03a3fa 70%,
+        #4c03b9 85%,
+        #46047d 100%
+    );
+    min-height: 100vh;
+    overflow-x: hidden;
+} 
+
+
+.wrapper{
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  
+  padding: 34px;
+  border-radius: 6px;
+  
+  background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden; 
+}
+
+
+.wrapper h2{
+  position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+.wrapper h2::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 28px;
+  border-radius: 12px;
+  background: #4070f4;
+}
+.wrapper form{
+  margin-top: 30px;
+}
+.wrapper form .input-box{
+  height: 52px;
+  margin: 18px 0;
+}
+form .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #C7BEBE;
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.input-box input:focus,
+.input-box input:valid{
+  border-color: #4070f4;
+}
+.input-box{
+    padding-bottom: 5px;
+}
+
+form h3{
+  color: #707070;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.input-box.button1{
+  height: 100%;
+  width: 65%;
+  align-items: left; 
+}
+
+.input-box.button1 input{
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  background: #4070f4;
+  cursor: pointer;
+}
+
+.input-box.button{
+  height: 100%;
+  width: 40%;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  align-items: left;
+}
+
+.input-box.button input{
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  background: #4070f4;
+  cursor: pointer;
+}
+.input-box.button input:hover{
+  background: #0e4bf1;
+}
+
+.text{
+  margin-top: 20px;
+  text-align: left;
+}
+
+form .text h3{
+color: #333;
+width: 100%;
+text-align: center;
+}
+form .text h3 a{
+  color: #4070f4;
+  text-decoration: none;
+}
+form .text h3 a:hover{
+  text-decoration: underline;
+}
+ 
+/* Animated background elements */
+.bg-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+.shape {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.177);
+    animation: float 6s ease-in-out infinite;
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+}
+.shape:nth-child(1) {
+    width: 120px;
+    height: 80px;
+    border-radius: 15px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+    transform: rotate(15deg);
+}
+.shape:nth-child(2) {
+    width: 90px;
+    height: 140px;
+    border-radius: 12px;
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+    transform: rotate(-20deg);
+}
+.shape:nth-child(3) {
+    width: 100px;
+    height: 60px;
+    border-radius: 10px;
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 4s;
+    transform: rotate(25deg);
+}
+.shape:nth-child(4) {
+    width: 80px;
+    height: 120px;
+    border-radius: 8px;
+    top: 10%;
+    right: 30%;
+    animation-delay: 1s;
+    transform: rotate(-10deg);
+}
+.shape:nth-child(5) {
+    width: 110px;
+    height: 70px;
+    border-radius: 14px;
+    bottom: 40%;
+    right: 20%;
+    animation-delay: 3s;
+    transform: rotate(30deg);
+}
+.shape:nth-child(6) {
+    width: 95px;
+    height: 95px;
+    border-radius: 20px;
+    top: 40%;
+    left: 5%;
+    animation-delay: 5s;
+    transform: rotate(-15deg);
+}
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px) rotate(var(--start-rotation, 0deg));
+    }
+    50% {
+        transform: translateY(-20px)
+            rotate(calc(var(--start-rotation, 0deg) + 180deg));
+    }
+}

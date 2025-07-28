@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Login CampusConnect</title>
+  <link rel="stylesheet" href="LoginStyle.css">
+</head>
+<body> 
+
+<div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+<div class="wrapper">
+    <h2>SoftWave</h2>
+    <form action="#" novalidate>
+      
+      <div class="input-box">
+        <label for="name">Login Name</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Enter your name"
+          required
+        />
+      </div> 
+	</br> 
+      
+      <div class="input-box">
+        <label for="email">Password</label>
+        <input
+          id="keyInput"
+          name="email"
+          type="password"
+
+          placeholder="Password"
+          required
+        />
+      </div>
+
+	
+
+	  <div class="input-box button">
+        <input button type="button" onclick="checkKey()" value="Login"></button
+          type="password" 
+          id="keyInput"
+          value="Login" 
+        
+          >
+        
+          <p id="message" style="color: red;"></p>
+      
+      </div>
+	
+
+      <div class="input-box">
+        <label for="password">New Password</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          placeholder="********"
+          required
+		  minlength="8"
+        />
+      </div>
+    <label for="Min*" style="font-size: 13px;">Minimum of 8 characters</label>
+   
+      
+      
+
+      <div class="input-box">
+        <label for="confirm-password">Confirm Password</label>
+        <input
+          id="confirm-password"
+          name="confirm-password"
+          type="password"
+          placeholder="Confirm password"
+          required
+        />
+      </div>
+      </br> 
+
+      
+
+      <div class="input-box button1"> 
+        <input
+          type="submit"
+          value="Change Password"
+        />
+      </div>
+      
+      <div class="text">
+        <h3 style="text-align: left;"><a href="#">Forgot passsword</a></h3>
+      </div>
+      
+    </form>
+  </div>
+
+
+  <script src="LoginJ.js"></script>
+</body>
+</html>
