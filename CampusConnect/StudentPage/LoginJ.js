@@ -9,20 +9,5 @@ function checkKey() {
       }
     } 
 
-    // Example: Attach to a form submit event
-    document.getElementById("loginForm").addEventListener("submit", function (e) {
-        e.preventDefault();
-    
-        // Remove message after 3 seconds
-        setTimeout(() => {
-            const successMsg = document.getElementById("message");
-            if (successMsg) {
-                successMsg.textContent = "";
-            }
-        }, 3000);
-    
-        // Reset form
-        this.reset();
-    });
 
 
