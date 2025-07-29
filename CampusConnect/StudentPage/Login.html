@@ -9,7 +9,7 @@
     window.onload = function () {
         // Redirect if already logged in
         if (sessionStorage.getItem("loggedIn") === "true") {
-            window.location.replace("Student.html");
+            window.location.replace("Index.html");
         }
         // Disable back navigation
         history.pushState(null, null, location.href);
@@ -25,7 +25,7 @@
 
         if (inputKey === correctKey) {
             sessionStorage.setItem("loggedIn", "true");
-            window.location.replace("Student.html");
+            window.location.replace("Index.html");
         } else {
             document.getElementById("message").textContent = "Incorrect key. Try again.";
         }
