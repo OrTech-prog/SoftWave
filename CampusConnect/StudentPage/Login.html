@@ -1,110 +1,109 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> Login CampusConnect</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login CampusConnect</title>
   <link rel="stylesheet" href="LoginStyle.css">
-</head>
-<body> 
+  <script>
+    window.onload = function () {
+        // Redirect if already logged in
+        if (sessionStorage.getItem("loggedIn") === "true") {
+            window.location.replace("Student.html");
+        }
+        // Disable back navigation
+        history.pushState(null, null, location.href);
+        window.onpopstate = function () {
+            history.go(1);
+        };
+    };
 
-<div class="bg-shapes">
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-    </div>
+    function checkKey(event) {
+        event.preventDefault();
+        const correctKey = "campus2025";
+        const inputKey = document.getElementById("keyInput").value;
+
+        if (inputKey === correctKey) {
+            sessionStorage.setItem("loggedIn", "true");
+            window.location.replace("Student.html");
+        } else {
+            document.getElementById("message").textContent = "Incorrect key. Try again.";
+        }
+    }
+
+    function changePassword(event) {
+        event.preventDefault();
+        const pass1 = document.getElementById("password").value;
+        const pass2 = document.getElementById("confirm-password").value;
+
+        if (pass1.length < 8) {
+            alert("Password must be at least 8 characters long.");
+            return;
+        }
+        if (pass1 !== pass2) {
+            alert("Passwords do not match!");
+            return;
+        }
+        alert("Password changed successfully!");
+        document.getElementById("password").value = "";
+        document.getElementById("confirm-password").value = "";
+    }
+  </script>
+</head>
+<body>
+
+<div class="moving-blocks">
+  <!-- Floating blocks -->
+  <div class="block" style="left:10%; animation-delay: 0s;"></div>
+  <div class="block" style="left:30%; animation-delay: 2s;"></div>
+  <div class="block" style="left:50%; animation-delay: 4s;"></div>
+  <div class="block" style="left:70%; animation-delay: 1s;"></div>
+  <div class="block" style="left:90%; animation-delay: 3s;"></div>
+</div>
 
 <div class="wrapper">
-    <h2>SoftWave</h2>
-    <form action="#" novalidate>
-      
+    <h2>CampusConnect</h2>
+    
+    <form id="loginForm" onsubmit="checkKey(event)" novalidate>
       <div class="input-box">
         <label for="name">Login Name</label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          placeholder="Enter your name"
-          required
-        />
-      </div> 
-	</br> 
-      
+        <input id="name" name="name" type="text" placeholder="Enter your name" required />
+      </div>
+
       <div class="input-box">
-        <label for="email">Password</label>
-        <input
-          id="keyInput"
-          name="email"
-          type="password"
-
-          placeholder="Password"
-          required
-        />
+        <label for="keyInput">Password</label>
+        <input id="keyInput" name="keyInput" type="password" placeholder="Password" required />
       </div>
 
-	
-
-	  <div class="input-box button">
-        <input button type="button" onclick="checkKey()" value="Login"></button
-          type="password" 
-          id="keyInput"
-          value="Login" 
-        
-          >
-        
-          <p id="message" style="color: red;"></p>
-      
+      <div class="input-box button">
+        <input type="submit" value="Login">
+        <p id="message" class="error"></p>
       </div>
-	
+    </form>
 
+    <hr style="margin: 20px 0; opacity: 0.5;">
+
+    <form onsubmit="changePassword(event)">
       <div class="input-box">
         <label for="password">New Password</label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-          placeholder="********"
-          required
-		  minlength="8"
-        />
+        <input id="password" name="password" type="password" placeholder="********" minlength="8" required />
       </div>
-    <label for="Min*" style="font-size: 13px;">Minimum of 8 characters</label>
-   
-      
-      
+      <label for="password" class="hint">Minimum of 8 characters</label>
 
       <div class="input-box">
         <label for="confirm-password">Confirm Password</label>
-        <input
-          id="confirm-password"
-          name="confirm-password"
-          type="password"
-          placeholder="Confirm password"
-          required
-        />
+        <input id="confirm-password" name="confirm-password" type="password" placeholder="Confirm password" required />
       </div>
-      </br> 
-
-      
 
       <div class="input-box button1"> 
-        <input
-          type="submit"
-          value="Change Password"
-        />
+        <input type="submit" value="Change Password">
       </div>
-      
-      <div class="text">
-        <h3 style="text-align: left;"><a href="#">Forgot passsword</a></h3>
-      </div>
-      
     </form>
-  </div>
+      
+    <div class="text">
+        <h3><a href="#">Forgot password?</a></h3>
+    </div>
+</div>
 
-
-  <script src="LoginJ.js"></script>
 </body>
 </html>
